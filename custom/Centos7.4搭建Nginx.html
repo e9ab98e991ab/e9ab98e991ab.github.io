@@ -23,9 +23,9 @@
     <meta name="keywords" content="Centos,b,c">
     <meta name="description" content="Centos7安装nginx详解">
 <meta name="keywords" content="Centos,b,c">
-<meta property="og:type" content="article">
+<meta property="og:type" content="website">
 <meta property="og:title" content="Centos7安装Nginx">
-<meta property="og:url" content="https://e9ab98e991ab.github.io/2018/03/10/Centos7.4搭建Nginx/index.html">
+<meta property="og:url" content="https://e9ab98e991ab.github.io/custom/Centos7.4搭建Nginx.html">
 <meta property="og:site_name" content="写作之路">
 <meta property="og:description" content="Centos7安装nginx详解">
 <meta property="og:locale" content="zh-Hans">
@@ -109,7 +109,7 @@
               </a>
             </li>
         
-            <li class="waves-block waves-effect">
+            <li class="waves-block waves-effect active">
               <a href="/custom"  >
                 <i class="icon icon-lg icon-link"></i>
                 我的文章
@@ -146,17 +146,13 @@
         
     </div>
 </header>
-<header class="content-header post-header">
+<header class="content-header page-header">
 
     <div class="container fade-scale">
         <h1 class="title">Centos7安装Nginx</h1>
         <h5 class="subtitle">
             
-                <time datetime="2018-03-10T03:22:02.000Z" itemprop="datePublished" class="page-time">
-  2018-03-10
-</time>
-
-
+                Centos7安装nginx详解
             
         </h5>
     </div>
@@ -168,34 +164,8 @@
 
 
 <div class="container body-wrap">
-    
-    <aside class="post-widget">
-        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
-            <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#第一种方式：通过yum安装"><span class="post-toc-number">1.</span> <span class="post-toc-text">第一种方式：通过yum安装</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#可能遇到的问题"><span class="post-toc-number">1.0.1.</span> <span class="post-toc-text">可能遇到的问题:</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#解决办法"><span class="post-toc-number">1.0.2.</span> <span class="post-toc-text">解决办法</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#扩展知识："><span class="post-toc-number">1.0.3.</span> <span class="post-toc-text">扩展知识：</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#第二种方式：通过手动下载安装包解压安装"><span class="post-toc-number">2.</span> <span class="post-toc-text">第二种方式：通过手动下载安装包解压安装</span></a></li></ol>
-        </nav>
-    </aside>
-
-
-<article id="post-Centos7.4搭建Nginx"
-  class="post-article article-type-post fade" itemprop="blogPost">
-
-    <div class="post-card">
-        <h1 class="post-card-title">Centos7安装Nginx</h1>
-        <div class="post-meta">
-            <time class="post-time" title="2018-03-10 11:22:02" datetime="2018-03-10T03:22:02.000Z"  itemprop="datePublished">2018-03-10</time>
-
-            
-
-
-            
-<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
-    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
-</span>
-
-
-        </div>
-        <div class="post-content" id="post-content" itemprop="postContent">
+    <article class="page-article fade" itemprop="blogPage">
+        <div class="post-content page-content" id="page-content" itemprop="pageContent">
             <h2 id="第一种方式：通过yum安装"><a href="#第一种方式：通过yum安装" class="headerlink" title="第一种方式：通过yum安装"></a>第一种方式：通过yum安装</h2><blockquote>
 <p>直接通过 yum install nginx 肯定是不行的,因为yum没有nginx，所以首先把 nginx 的源加入 yum 中。</p>
 </blockquote>
@@ -209,39 +179,14 @@
 <h2 id="第二种方式：通过手动下载安装包解压安装"><a href="#第二种方式：通过手动下载安装包解压安装" class="headerlink" title="第二种方式：通过手动下载安装包解压安装"></a>第二种方式：通过手动下载安装包解压安装</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">1.下载nginx包。</span><br><span class="line">[root@localhost ~]# wget http://nginx.org/download/nginx-1.10.1.tar.gz</span><br><span class="line"></span><br><span class="line">2.复制包到你的安装目录</span><br><span class="line">[root@localhost ~]# cp nginx-1.10.1.tar.gz /usr/local/</span><br><span class="line"></span><br><span class="line">3.解压</span><br><span class="line">[root@localhost ~]# tar -zxvf nginx-1.10.1.tar.gz</span><br><span class="line">[root@localhost ~]# cd nginx-1.10.1</span><br><span class="line"></span><br><span class="line">4.启动nginx</span><br><span class="line">[root@localhost ~]# /usr/local/nginx/sbin/nginx</span><br><span class="line"></span><br><span class="line">5.查看版本s</span><br><span class="line">[root@localhost ~]# nginx -v</span><br><span class="line"></span><br><span class="line">6.url访问nginx localhost或127.0.0.1</span><br></pre></td></tr></table></figure>
         </div>
 
-        <blockquote class="post-copyright">
-    
-    <div class="content">
         
-<span class="post-time">
-    Last updated: <time datetime="2018-06-14T02:39:42.681Z" itemprop="dateUpdated">2018-06-14 10:39:42</time>
-</span><br>
-
-
-        
-        这里可以写作者留言，标签和 hexo 中所有变量及辅助函数等均可调用，示例：<a href="/2018/03/10/Centos7.4搭建Nginx/" target="_blank" rel="external">https://e9ab98e991ab.github.io/2018/03/10/Centos7.4搭建Nginx/</a>
-        
-    </div>
-    
-    <footer>
-        <a href="https://e9ab98e991ab.github.io">
-            <img src="/img/avatar.jpg" alt="godfeer">
-            godfeer
-        </a>
-    </footer>
-</blockquote>
-
-        
-<div class="page-reward">
-    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
-</div>
-
-
-
-        <div class="post-footer">
-            
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Centos/">Centos</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/b/">b</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/c/">c</a></li></ul>
-
+        <div class="card page-about-me flex-row">
+            <a href="/" class="avatar waves-effect waves-circle waves-light"><img src="/img/avatar.jpg"></a>
+            <div class="content flex-col">
+                <p><strong>godfeer</strong></p>
+                <p><em></em></p>
+                <p>用户页面中作者相关的描述性文字，如不需要设为 false</p>
+            </div>
 
             
 <div class="page-share-wrap">
@@ -250,7 +195,7 @@
 <div class="page-share" id="pageShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://e9ab98e991ab.github.io/2018/03/10/Centos7.4搭建Nginx/&title=《Centos7安装Nginx》 — 写作之路&pic=https://e9ab98e991ab.github.io/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://e9ab98e991ab.github.io/custom/Centos7.4搭建Nginx.html&title=《Centos7安装Nginx》 — 写作之路&pic=https://e9ab98e991ab.github.io/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -260,22 +205,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://e9ab98e991ab.github.io/2018/03/10/Centos7.4搭建Nginx/&title=《Centos7安装Nginx》 — 写作之路&source=" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://e9ab98e991ab.github.io/custom/Centos7.4搭建Nginx.html&title=《Centos7安装Nginx》 — 写作之路&source=" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://e9ab98e991ab.github.io/2018/03/10/Centos7.4搭建Nginx/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://e9ab98e991ab.github.io/custom/Centos7.4搭建Nginx.html" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Centos7安装Nginx》 — 写作之路&url=https://e9ab98e991ab.github.io/2018/03/10/Centos7.4搭建Nginx/&via=https://e9ab98e991ab.github.io" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Centos7安装Nginx》 — 写作之路&url=https://e9ab98e991ab.github.io/custom/Centos7.4搭建Nginx.html&via=https://e9ab98e991ab.github.io" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://e9ab98e991ab.github.io/2018/03/10/Centos7.4搭建Nginx/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://e9ab98e991ab.github.io/custom/Centos7.4搭建Nginx.html" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -292,51 +237,35 @@
 
 
         </div>
-    </div>
+        
 
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </article>
     
-<nav class="post-nav flex-row flex-justify-between">
-  
-    <div class="waves-block waves-effect prev">
-      <a href="/2018/03/10/Centos7.4设置系统回收站功能/" id="post-prev" class="post-nav-link">
-        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
-        <h4 class="title">Centos7.4设置系统回收站功能</h4>
-      </a>
-    </div>
-  
-
-  
-    <div class="waves-block waves-effect next">
-      <a href="/2018/02/10/搭建免费个人博客/" id="post-next" class="post-nav-link">
-        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
-        <h4 class="title">搭建免费个人博客</h4>
-      </a>
-    </div>
-  
-</nav>
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</article>
-
 <div id="reward" class="page-modal reward-lay">
     <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
     <h3 class="reward-title">
@@ -362,7 +291,6 @@
         
     </div>
 </div>
-
 
 
 </div>
@@ -406,7 +334,7 @@
 <div class="global-share" id="globalShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://e9ab98e991ab.github.io/2018/03/10/Centos7.4搭建Nginx/&title=《Centos7安装Nginx》 — 写作之路&pic=https://e9ab98e991ab.github.io/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://e9ab98e991ab.github.io/custom/Centos7.4搭建Nginx.html&title=《Centos7安装Nginx》 — 写作之路&pic=https://e9ab98e991ab.github.io/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -416,22 +344,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://e9ab98e991ab.github.io/2018/03/10/Centos7.4搭建Nginx/&title=《Centos7安装Nginx》 — 写作之路&source=" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://e9ab98e991ab.github.io/custom/Centos7.4搭建Nginx.html&title=《Centos7安装Nginx》 — 写作之路&source=" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://e9ab98e991ab.github.io/2018/03/10/Centos7.4搭建Nginx/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://e9ab98e991ab.github.io/custom/Centos7.4搭建Nginx.html" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Centos7安装Nginx》 — 写作之路&url=https://e9ab98e991ab.github.io/2018/03/10/Centos7.4搭建Nginx/&via=https://e9ab98e991ab.github.io" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Centos7安装Nginx》 — 写作之路&url=https://e9ab98e991ab.github.io/custom/Centos7.4搭建Nginx.html&via=https://e9ab98e991ab.github.io" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://e9ab98e991ab.github.io/2018/03/10/Centos7.4搭建Nginx/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://e9ab98e991ab.github.io/custom/Centos7.4搭建Nginx.html" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -442,7 +370,7 @@
 <div class="page-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
-    <img src="//api.qrserver.com/v1/create-qr-code/?data=https://e9ab98e991ab.github.io/2018/03/10/Centos7.4搭建Nginx/" alt="微信分享二维码">
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=https://e9ab98e991ab.github.io/custom/Centos7.4搭建Nginx.html" alt="微信分享二维码">
 </div>
 
 
