@@ -334,6 +334,45 @@ Copy the license code below. Open Help &gt; JRebel Activation in your IDE and pa
         </li>
     
         <li class="post-list-item fade">
+            <article id="post-任务栏显示不正常"
+  class="article-card article-type-post" itemprop="blogPost">
+
+    <div class="post-meta">
+        <time class="post-time" title="2018-01-10 11:22:02" datetime="2018-01-10T03:22:02.000Z"  itemprop="datePublished">2018-01-10</time>
+
+        
+
+
+    </div>
+
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2018/01/10/任务栏显示不正常/">win10任务栏显示不正常</a>
+    </h3>
+  
+
+
+
+
+    <div class="post-content" id="post-content" itemprop="postContent">
+
+    
+        1、HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\Windows\CurrentVersion\TrayNotify2、接着按Ctrl+Shift键，然后右键单击任务栏→退出资源管理器(也可在任务管理器找到Explorer.exe进程，并将其关闭);3、最后再打开任务管理器(如果刚才没打开，可按Ctr...
+    
+
+        <a href="/2018/01/10/任务栏显示不正常/" class="post-more waves-effect waves-button">
+            Continue reading...
+        </a>
+    </div>
+    
+</article>
+
+        </li>
+    
+        <li class="post-list-item fade">
             <article id="post-前后端分离之JWT用户认证"
   class="article-card article-type-post" itemprop="blogPost">
 
@@ -365,45 +404,6 @@ Copy the license code below. Open Help &gt; JRebel Activation in your IDE and pa
     
 
         <a href="/2018/01/10/前后端分离之JWT用户认证/" class="post-more waves-effect waves-button">
-            Continue reading...
-        </a>
-    </div>
-    
-</article>
-
-        </li>
-    
-        <li class="post-list-item fade">
-            <article id="post-任务栏显示不正常"
-  class="article-card article-type-post" itemprop="blogPost">
-
-    <div class="post-meta">
-        <time class="post-time" title="2018-01-10 11:22:02" datetime="2018-01-10T03:22:02.000Z"  itemprop="datePublished">2018-01-10</time>
-
-        
-
-
-    </div>
-
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2018/01/10/任务栏显示不正常/">win10任务栏显示不正常</a>
-    </h3>
-  
-
-
-
-
-    <div class="post-content" id="post-content" itemprop="postContent">
-
-    
-        1、HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\Windows\CurrentVersion\TrayNotify2、接着按Ctrl+Shift键，然后右键单击任务栏→退出资源管理器(也可在任务管理器找到Explorer.exe进程，并将其关闭);3、最后再打开任务管理器(如果刚才没打开，可按Ctr...
-    
-
-        <a href="/2018/01/10/任务栏显示不正常/" class="post-more waves-effect waves-button">
             Continue reading...
         </a>
     </div>
@@ -548,10 +548,10 @@ var BLOG = { ROOT: '/', SHARE: true, REWARD: false };
     var OriginTitile = document.title, titleTime;
     document.addEventListener('visibilitychange', function() {
         if (document.hidden) {
-            document.title = '死鬼去哪里了！';
+            document.title = '';
             clearTimeout(titleTime);
         } else {
-            document.title = '(つェ⊂)咦!又好了!';
+            document.title = '';
             titleTime = setTimeout(function() {
                 document.title = OriginTitile;
             },2000);

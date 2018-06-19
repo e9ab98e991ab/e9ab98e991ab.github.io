@@ -166,7 +166,7 @@
   class="article-card article-type-post" itemprop="blogPost">
 
     <div class="post-meta">
-        <time class="post-time" title="2018-06-19 10:46:02" datetime="2018-06-19T02:46:02.000Z"  itemprop="datePublished">2018-06-19</time>
+        <time class="post-time" title="2018-06-19 00:00:00" datetime="2018-06-18T16:00:00.000Z"  itemprop="datePublished">2018-06-19</time>
 
         
 
@@ -267,7 +267,7 @@
         </li>
     
         <li class="post-list-item fade">
-            <article id="post-Gradle阿里云镜像源"
+            <article id="post-服务器命令"
   class="article-card article-type-post" itemprop="blogPost">
 
     <div class="post-meta">
@@ -283,7 +283,7 @@
 
   
     <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2018/06/10/Gradle阿里云镜像源/">Gradle阿里云镜像源</a>
+      <a class="post-title-link" href="/2018/06/10/服务器命令/">服务器命令</a>
     </h3>
   
 
@@ -293,11 +293,11 @@
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        在C:\Users\xxxx.gradle  目录下新建文件：init.gradle
-1234567891011121314151617181920212223allprojects&#123;    repositories &#123;        def ALIYUN_REPOSITORY_URL = &apos;http://maven.aliyun.com/nexus/conte...
+        关闭防火墙设置    systemctl stop firewalld开启防火墙    systemctl start firewalld开启端口访问firewall-cmd –zone=public –add-port=8081/tcp –permanent 
+
     
 
-        <a href="/2018/06/10/Gradle阿里云镜像源/" class="post-more waves-effect waves-button">
+        <a href="/2018/06/10/服务器命令/" class="post-more waves-effect waves-button">
             Continue reading...
         </a>
     </div>
@@ -369,7 +369,7 @@ red5示例（如...
         </li>
     
         <li class="post-list-item fade">
-            <article id="post-服务器命令"
+            <article id="post-Gradle阿里云镜像源"
   class="article-card article-type-post" itemprop="blogPost">
 
     <div class="post-meta">
@@ -385,7 +385,7 @@ red5示例（如...
 
   
     <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2018/06/10/服务器命令/">服务器命令</a>
+      <a class="post-title-link" href="/2018/06/10/Gradle阿里云镜像源/">Gradle阿里云镜像源</a>
     </h3>
   
 
@@ -395,11 +395,11 @@ red5示例（如...
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        关闭防火墙设置    systemctl stop firewalld开启防火墙    systemctl start firewalld开启端口访问firewall-cmd –zone=public –add-port=8081/tcp –permanent 
-
+        在C:\Users\xxxx.gradle  目录下新建文件：init.gradle
+1234567891011121314151617181920212223allprojects&#123;    repositories &#123;        def ALIYUN_REPOSITORY_URL = &apos;http://maven.aliyun.com/nexus/conte...
     
 
-        <a href="/2018/06/10/服务器命令/" class="post-more waves-effect waves-button">
+        <a href="/2018/06/10/Gradle阿里云镜像源/" class="post-more waves-effect waves-button">
             Continue reading...
         </a>
     </div>
@@ -512,6 +512,57 @@ red5示例（如...
         </li>
     
         <li class="post-list-item fade">
+            <article id="post-Centos7.4设置系统回收站功能"
+  class="article-card article-type-post" itemprop="blogPost">
+
+    <div class="post-meta">
+        <time class="post-time" title="2018-03-10 11:22:02" datetime="2018-03-10T03:22:02.000Z"  itemprop="datePublished">2018-03-10</time>
+
+        
+
+
+    </div>
+
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2018/03/10/Centos7.4设置系统回收站功能/">Centos7.4设置系统回收站功能</a>
+    </h3>
+  
+
+
+
+
+    <div class="post-content" id="post-content" itemprop="postContent">
+
+    
+        linux rm删除文件之后，恢复就比较麻烦了，即使恢复了，文件名格式都变成一串数字了。
+修改root用户的环境变量
+1vim ~/.bashrc
+注释第5行的别名
+1#alias rm=&apos;rm -i&apos;1
+最后一行添加如下内容
+12345678910111213141516171819mkdir -p ~/.trashalias rm=trashalias r=trash...
+    
+
+        <a href="/2018/03/10/Centos7.4设置系统回收站功能/" class="post-more waves-effect waves-button">
+            Continue reading...
+        </a>
+    </div>
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Centos/">Centos</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/b/">b</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/c/">c</a></li></ul>
+
+    </div>
+    
+</article>
+
+        </li>
+    
+        <li class="post-list-item fade">
             <article id="post-Centos7.4搭建Nginx"
   class="article-card article-type-post" itemprop="blogPost">
 
@@ -595,57 +646,6 @@ red5示例（如...
     
 
         <a href="/2018/03/10/腾讯云Nginx错误/" class="post-more waves-effect waves-button">
-            Continue reading...
-        </a>
-    </div>
-    
-    <div class="post-footer">
-        
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Centos/">Centos</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/b/">b</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/c/">c</a></li></ul>
-
-    </div>
-    
-</article>
-
-        </li>
-    
-        <li class="post-list-item fade">
-            <article id="post-Centos7.4设置系统回收站功能"
-  class="article-card article-type-post" itemprop="blogPost">
-
-    <div class="post-meta">
-        <time class="post-time" title="2018-03-10 11:22:02" datetime="2018-03-10T03:22:02.000Z"  itemprop="datePublished">2018-03-10</time>
-
-        
-
-
-    </div>
-
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2018/03/10/Centos7.4设置系统回收站功能/">Centos7.4设置系统回收站功能</a>
-    </h3>
-  
-
-
-
-
-    <div class="post-content" id="post-content" itemprop="postContent">
-
-    
-        linux rm删除文件之后，恢复就比较麻烦了，即使恢复了，文件名格式都变成一串数字了。
-修改root用户的环境变量
-1vim ~/.bashrc
-注释第5行的别名
-1#alias rm=&apos;rm -i&apos;1
-最后一行添加如下内容
-12345678910111213141516171819mkdir -p ~/.trashalias rm=trashalias r=trash...
-    
-
-        <a href="/2018/03/10/Centos7.4设置系统回收站功能/" class="post-more waves-effect waves-button">
             Continue reading...
         </a>
     </div>
@@ -796,10 +796,10 @@ var BLOG = { ROOT: '/', SHARE: true, REWARD: false };
     var OriginTitile = document.title, titleTime;
     document.addEventListener('visibilitychange', function() {
         if (document.hidden) {
-            document.title = '死鬼去哪里了！';
+            document.title = '';
             clearTimeout(titleTime);
         } else {
-            document.title = '(つェ⊂)咦!又好了!';
+            document.title = '';
             titleTime = setTimeout(function() {
                 document.title = OriginTitile;
             },2000);

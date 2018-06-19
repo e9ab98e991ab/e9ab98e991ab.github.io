@@ -300,9 +300,9 @@
 
   
     <div class="waves-block waves-effect next">
-      <a href="/2018/03/10/Centos7.4设置系统回收站功能/" id="post-next" class="post-nav-link">
+      <a href="/2018/03/10/批处理文件记录/" id="post-next" class="post-nav-link">
         <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
-        <h4 class="title">Centos7.4设置系统回收站功能</h4>
+        <h4 class="title">批处理文件</h4>
       </a>
     </div>
   
@@ -484,10 +484,10 @@ var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
     var OriginTitile = document.title, titleTime;
     document.addEventListener('visibilitychange', function() {
         if (document.hidden) {
-            document.title = '死鬼去哪里了！';
+            document.title = '';
             clearTimeout(titleTime);
         } else {
-            document.title = '(つェ⊂)咦!又好了!';
+            document.title = '';
             titleTime = setTimeout(function() {
                 document.title = OriginTitile;
             },2000);

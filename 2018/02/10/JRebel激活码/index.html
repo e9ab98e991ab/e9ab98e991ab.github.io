@@ -301,9 +301,9 @@
 
   
     <div class="waves-block waves-effect next">
-      <a href="/2018/01/10/前后端分离之JWT用户认证/" id="post-next" class="post-nav-link">
+      <a href="/2018/01/10/任务栏显示不正常/" id="post-next" class="post-nav-link">
         <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
-        <h4 class="title">前后端分离之JWT用户认证</h4>
+        <h4 class="title">win10任务栏显示不正常</h4>
       </a>
     </div>
   
@@ -485,10 +485,10 @@ var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
     var OriginTitile = document.title, titleTime;
     document.addEventListener('visibilitychange', function() {
         if (document.hidden) {
-            document.title = '死鬼去哪里了！';
+            document.title = '';
             clearTimeout(titleTime);
         } else {
-            document.title = '(つェ⊂)咦!又好了!';
+            document.title = '';
             titleTime = setTimeout(function() {
                 document.title = OriginTitile;
             },2000);
