@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>idea打包jar的多种方式 | 写作之路</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="idea,打包,jar">
+    <meta name="description" content="idea打包jar的多种方式">
+<meta name="keywords" content="idea,打包,jar">
+<meta property="og:type" content="article">
+<meta property="og:title" content="idea打包jar的多种方式">
+<meta property="og:url" content="https://e9ab98e991ab.github.io/2018/03/10/idea打包jar的多种方式/index.html">
+<meta property="og:site_name" content="写作之路">
+<meta property="og:description" content="idea打包jar的多种方式">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://ww1.sinaimg.cn/mw690/876975d1gy1fd44rhqnebj20cs09u3zb">
+<meta property="og:image" content="http://ww1.sinaimg.cn/mw690/876975d1gy1fd44sbclg4j20r203q751">
+<meta property="og:image" content="http://ww1.sinaimg.cn/mw690/876975d1gy1fd44u9q66lj20ry0h2q5h">
+<meta property="og:image" content="https://images2015.cnblogs.com/blog/859903/201611/859903-20161106231227721-1478003438.jpg">
+<meta property="og:image" content="https://images2015.cnblogs.com/blog/859903/201611/859903-20161106231236580-942760848.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/mw690/876975d1gy1fd44uz58fhj20pc0kwta6">
+<meta property="og:image" content="https://images2015.cnblogs.com/blog/859903/201611/859903-20161106231303283-1137200428.jpg">
+<meta property="og:image" content="https://images2015.cnblogs.com/blog/859903/201611/859903-20161106231314018-1374718013.jpg">
+<meta property="og:image" content="https://images2015.cnblogs.com/blog/859903/201611/859903-20161106231325736-1511593122.jpg">
+<meta property="og:image" content="https://images2015.cnblogs.com/blog/859903/201611/859903-20161106231336815-1976168938.jpg">
+<meta property="og:image" content="https://images2015.cnblogs.com/blog/859903/201611/859903-20161106231430096-1601918493.jpg">
+<meta property="og:image" content="https://images2015.cnblogs.com/blog/859903/201611/859903-20161106231602674-150734166.jpg">
+<meta property="og:updated_time" content="2018-06-19T08:46:26.644Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="idea打包jar的多种方式">
+<meta name="twitter:description" content="idea打包jar的多种方式">
+<meta name="twitter:image" content="http://ww1.sinaimg.cn/mw690/876975d1gy1fd44rhqnebj20cs09u3zb">
+    
+        <link rel="alternate" type="application/atom+xml" title="写作之路" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">godfeer</h5>
+          <a href="mailto:godfeer@aliyun.com" title="godfeer@aliyun.com" class="mail">godfeer@aliyun.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/e9ab98e991ab" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://weibo.com/2134523903/profile?rightmod=1&wvr=6&mod=personinfo" target="_blank" >
+                <i class="icon icon-lg icon-weibo"></i>
+                Weibo
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/custom"  >
+                <i class="icon icon-lg icon-link"></i>
+                我的文章
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">idea打包jar的多种方式</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">idea打包jar的多种方式</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2018-03-10T03:22:02.000Z" itemprop="datePublished" class="page-time">
+  2018-03-10
+</time>
+
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#用IDEA自带的打包方式："><span class="post-toc-number">1.</span> <span class="post-toc-text">用IDEA自带的打包方式：</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#用maven-shade-plugin打包"><span class="post-toc-number">2.</span> <span class="post-toc-text">用maven-shade-plugin打包</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#用maven-assembly-plugin打包"><span class="post-toc-number">3.</span> <span class="post-toc-text">用maven-assembly-plugin打包</span></a></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-idea打包jar的多种方式"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">idea打包jar的多种方式</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2018-03-10 11:22:02" datetime="2018-03-10T03:22:02.000Z"  itemprop="datePublished">2018-03-10</time>
+
+            
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <p>这里总结出用IDEA打包jar包的多种方式，以后的项目打包Jar包可以参考如下形式：</p>
+<ol>
+<li>用IDEA自带的打包形式</li>
+<li>用Maven插件<code>maven-shade-plugin</code>打包</li>
+<li>用Maven插件<code>maven-assembly-plugin</code>打包</li>
+</ol>
+<h2 id="用IDEA自带的打包方式："><a href="#用IDEA自带的打包方式：" class="headerlink" title="用IDEA自带的打包方式："></a>用IDEA自带的打包方式：</h2><p>打开IDEA的<code>file -&gt; Project Structure</code>，进入项目配置页面。如下图：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://ww1.sinaimg.cn/mw690/876975d1gy1fd44rhqnebj20cs09u3zb" alt="img" title="">
+                </div>
+                <div class="image-caption">img</div>
+            </figure>
+<p>点击<code>Artifacts</code>，进入<code>Artifacts</code>配置页面，点击 + ，选择如下图的选项。</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://ww1.sinaimg.cn/mw690/876975d1gy1fd44sbclg4j20r203q751" alt="img" title="">
+                </div>
+                <div class="image-caption">img</div>
+            </figure>
+<p>进入<code>Create JAR from Modules</code>页面，按照如下图配置。</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://ww1.sinaimg.cn/mw690/876975d1gy1fd44u9q66lj20ry0h2q5h" alt="img" title="">
+                </div>
+                <div class="image-caption">img</div>
+            </figure>
+<ol>
+<li>第一步选择Main函数执行的类。</li>
+<li>第二步选择如图的选项，目的是对第三方Jar包打包时做额外的配置，如果不做额外的配置可不选这个选项（但不保证打包成功）</li>
+<li>第三步需要在<code>src/main</code>目录下，新建一个<code>resources</code>目录，将<code>MANIFEST.MF</code>文件保存在这里面，因为如果用默认缺省值的话，在IDEA12版本下会有bug。</li>
+</ol>
+<p>点击<code>OK</code>之后，出现如下图界面，右键点击<code>&lt;output root&gt;</code>，点击<code>Create Directory</code>,创建一个<code>libs</code>，将所有的第三方JAR放进libs目录下。</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://images2015.cnblogs.com/blog/859903/201611/859903-20161106231227721-1478003438.jpg" alt="img" title="">
+                </div>
+                <div class="image-caption">img</div>
+            </figure>
+<p>成功之后，如下图所示：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://images2015.cnblogs.com/blog/859903/201611/859903-20161106231236580-942760848.jpg" alt="img" title="">
+                </div>
+                <div class="image-caption">img</div>
+            </figure>
+<p>放入之后，点击我们要打成的jar的名字，这里面是<code>kafka-cps.jar</code>,选择classpath进行配置。</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://ww1.sinaimg.cn/mw690/876975d1gy1fd44uz58fhj20pc0kwta6" alt="img" title="">
+                </div>
+                <div class="image-caption">img</div>
+            </figure>
+<p>编辑的结果如下：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://images2015.cnblogs.com/blog/859903/201611/859903-20161106231303283-1137200428.jpg" alt="img" title="">
+                </div>
+                <div class="image-caption">img</div>
+            </figure>
+<p>这里将所有的jar都写在<code>libs/</code>里面。点击<code>OK</code>，回到配置页面。<br>同时还注意在配置页面，勾选<code>build on make</code><br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://images2015.cnblogs.com/blog/859903/201611/859903-20161106231314018-1374718013.jpg" alt="img" title="">
+                </div>
+                <div class="image-caption">img</div>
+            </figure></p>
+<p>最后点击配置页面的<code>OK</code>，完成配置。回到IDEA,点击<code>Build-&gt;Build Artifacts</code>，选择<code>build</code></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://images2015.cnblogs.com/blog/859903/201611/859903-20161106231325736-1511593122.jpg" alt="img" title="">
+                </div>
+                <div class="image-caption">img</div>
+            </figure>
+<p>就会生成我们需要的jar包。其位置在项目目录的out目录下<code>/out/artifacts/kafka_cps_jar</code>。<br>下面放一个正确配置的清单文件内容</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://images2015.cnblogs.com/blog/859903/201611/859903-20161106231336815-1976168938.jpg" alt="img" title="">
+                </div>
+                <div class="image-caption">img</div>
+            </figure>
+<h2 id="用maven-shade-plugin打包"><a href="#用maven-shade-plugin打包" class="headerlink" title="用maven-shade-plugin打包"></a>用maven-shade-plugin打包</h2><p>上面的打包过程实在是过于的繁琐，而且也没有利用到maven管理项目的特色。为此，我们这里利用maven中的<code>maven-shade-plugin</code>插件。在<code>pom.xml</code>中，我们加入如下的信息来加入插件。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">&lt;plugin&gt;</span><br><span class="line">                &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;</span><br><span class="line">                &lt;artifactId&gt;maven-shade-plugin&lt;/artifactId&gt;</span><br><span class="line">                &lt;version&gt;1.4&lt;/version&gt;</span><br><span class="line">                &lt;configuration&gt;</span><br><span class="line">                    &lt;createDependencyReducedPom&gt;true&lt;/createDependencyReducedPom&gt;</span><br><span class="line">                &lt;/configuration&gt;</span><br><span class="line">                &lt;executions&gt;</span><br><span class="line">                    &lt;execution&gt;</span><br><span class="line">                        &lt;phase&gt;package&lt;/phase&gt;</span><br><span class="line">                        &lt;goals&gt;</span><br><span class="line">                            &lt;goal&gt;shade&lt;/goal&gt;</span><br><span class="line">                        &lt;/goals&gt;</span><br><span class="line">                        &lt;configuration&gt;</span><br><span class="line">                            &lt;transformers&gt;</span><br><span class="line">                                &lt;transformer</span><br><span class="line">                                        implementation=&quot;org.apache.maven.plugins.shade.resource.ManifestResourceTransformer&quot;&gt;</span><br><span class="line">                                    &lt;mainClass&gt;Main.Main&lt;/mainClass&gt;</span><br><span class="line">                                &lt;/transformer&gt;</span><br><span class="line">                            &lt;/transformers&gt;</span><br><span class="line">                        &lt;/configuration&gt;</span><br><span class="line">                    &lt;/execution&gt;</span><br><span class="line">                &lt;/executions&gt;</span><br><span class="line">            &lt;/plugin&gt;</span><br></pre></td></tr></table></figure>
+<p>这里面配置了一个｀configuration｀标签内容，在此标签下面 有一个<code>transformer</code>标签，用来配置Main函数的入口( <code>&lt;mainClass&gt;Main.Main&lt;/mainClass&gt;</code>)，当然此标签内容很复杂，不是上面写的那么简单，上面之所以如此简单，是因为在所有类中(包括第三方Jar)只有一个Main方法。如果第三方jar中有Main方法，就要进行额外的配置，上面这么配置，不一定能执行成功。</p>
+<p>具体可以参见<a href="http://blog.csdn.net/defonds/article/details/43233131" target="_blank" rel="noopener">maven插件</a>。</p>
+<p>在加入这段代码到pom.xml之后，我们就可以用maven的命令去打包了。其指令如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mvn clean compile //清除之前target编译文件并重新编译</span><br><span class="line">mvn clean package //对项目进行打包(因为配置过插件，所以jar包是可执行的)</span><br><span class="line">mvn clean install //安装项目，然后就可以使用了</span><br></pre></td></tr></table></figure>
+<p>然后通过<code>java -jar cps-1.0-SNAPSHOT.jar</code>运行。</p>
+<p>如果使用IDEA的话，可以通过自带的maven管理工具代替执行上面的命令。如下图所示，依次点击蓝色的部分。</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://images2015.cnblogs.com/blog/859903/201611/859903-20161106231430096-1601918493.jpg" alt="img" title="">
+                </div>
+                <div class="image-caption">img</div>
+            </figure>
+<h2 id="用maven-assembly-plugin打包"><a href="#用maven-assembly-plugin打包" class="headerlink" title="用maven-assembly-plugin打包"></a>用maven-assembly-plugin打包</h2><p>上面的方法，我们还需要点击很多命令去打包。这次利用一个新的插件，可以打包更简单。同样，在pom.xml中加入如下代码。上文的<code>maven-shade-plugin</code>插件代码可以删除。最好不要写2个插件代码。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">&lt;plugin&gt;</span><br><span class="line">               &lt;artifactId&gt;maven-assembly-plugin&lt;/artifactId&gt;</span><br><span class="line">               &lt;version&gt;2.4&lt;/version&gt;</span><br><span class="line">               &lt;configuration&gt;</span><br><span class="line">                   &lt;descriptorRefs&gt;</span><br><span class="line">                       &lt;descriptorRef&gt;jar-with-dependencies&lt;/descriptorRef&gt;</span><br><span class="line">                   &lt;/descriptorRefs&gt;</span><br><span class="line">                   &lt;archive&gt;</span><br><span class="line">                       &lt;manifest&gt;</span><br><span class="line">                           &lt;mainClass&gt;Main.Main&lt;/mainClass&gt;</span><br><span class="line">                       &lt;/manifest&gt;</span><br><span class="line">                   &lt;/archive&gt;</span><br><span class="line">               &lt;/configuration&gt;</span><br><span class="line">               &lt;executions&gt;</span><br><span class="line">                   &lt;execution&gt;</span><br><span class="line">                       &lt;id&gt;make-assembly&lt;/id&gt;</span><br><span class="line">                       &lt;phase&gt;package&lt;/phase&gt;</span><br><span class="line">                       &lt;goals&gt;</span><br><span class="line">                           &lt;goal&gt;single&lt;/goal&gt;</span><br><span class="line">                       &lt;/goals&gt;</span><br><span class="line">                   &lt;/execution&gt;</span><br><span class="line">               &lt;/executions&gt;</span><br><span class="line">           &lt;/plugin&gt;</span><br></pre></td></tr></table></figure>
+<p>这里同样配置了一个manifest标签来配置Main函数的入口。然后通过如下指令来实现打包。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mvn assembly:assembly</span><br></pre></td></tr></table></figure>
+<p>如果使用IDEA的话，可以通过自带的maven管理工具代替执行上面的命令。如下图所示，点击蓝色的部分。</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://images2015.cnblogs.com/blog/859903/201611/859903-20161106231602674-150734166.jpg" alt="img" title="">
+                </div>
+                <div class="image-caption">img</div>
+            </figure>
+<p>然后通过执行<code>java -jar cps-1.0-SNAPSHOT-jar-with-dependencies.jar</code>运行。</p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    Last updated: <time datetime="2018-06-19T08:46:26.644Z" itemprop="dateUpdated">2018-06-19 16:46:26</time>
+</span><br>
+
+
+        
+        这里可以写作者留言，标签和 hexo 中所有变量及辅助函数等均可调用，示例：<a href="/2018/03/10/idea打包jar的多种方式/" target="_blank" rel="external">https://e9ab98e991ab.github.io/2018/03/10/idea打包jar的多种方式/</a>
+        
+    </div>
+    
+    <footer>
+        <a href="https://e9ab98e991ab.github.io">
+            <img src="/img/avatar.jpg" alt="godfeer">
+            godfeer
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/idea/">idea</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jar/">jar</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/打包/">打包</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://e9ab98e991ab.github.io/2018/03/10/idea打包jar的多种方式/&title=《idea打包jar的多种方式》 — 写作之路&pic=https://e9ab98e991ab.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://e9ab98e991ab.github.io/2018/03/10/idea打包jar的多种方式/&title=《idea打包jar的多种方式》 — 写作之路&source=" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://e9ab98e991ab.github.io/2018/03/10/idea打包jar的多种方式/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《idea打包jar的多种方式》 — 写作之路&url=https://e9ab98e991ab.github.io/2018/03/10/idea打包jar的多种方式/&via=https://e9ab98e991ab.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://e9ab98e991ab.github.io/2018/03/10/idea打包jar的多种方式/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2018/04/15/PICO自带播放器说明/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">PICO自带播放器说明</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2018/03/10/腾讯云Nginx错误/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">腾讯云Nginx错误</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢大爷~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.jpg" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.jpg" data-alipay="/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>This blog is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>godfeer &copy; 2015 - 2018</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://e9ab98e991ab.github.io/2018/03/10/idea打包jar的多种方式/&title=《idea打包jar的多种方式》 — 写作之路&pic=https://e9ab98e991ab.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://e9ab98e991ab.github.io/2018/03/10/idea打包jar的多种方式/&title=《idea打包jar的多种方式》 — 写作之路&source=" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://e9ab98e991ab.github.io/2018/03/10/idea打包jar的多种方式/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《idea打包jar的多种方式》 — 写作之路&url=https://e9ab98e991ab.github.io/2018/03/10/idea打包jar的多种方式/&via=https://e9ab98e991ab.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://e9ab98e991ab.github.io/2018/03/10/idea打包jar的多种方式/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=https://e9ab98e991ab.github.io/2018/03/10/idea打包jar的多种方式/" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '死鬼去哪里了！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '(つェ⊂)咦!又好了!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>
