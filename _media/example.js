@@ -1,3 +1,4 @@
+
 import fetch from 'fetch'
 
 const URL = 'https://example.com'
