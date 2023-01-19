@@ -75,7 +75,7 @@ android:color="@color/colorAccent">
 
 ![img](https:////upload-images.jianshu.io/upload_images/1354448-37ff47faeefa1837.png?imageMogr2/auto-orient/strip|imageView2/2/w/632/format/webp)
 
-在使用了以上的**自定义有界水波纹点击效果**后，使用[开发者选项 - 调试GPU过渡绘制]得到下面的视图
+ 在使用了以上的**自定义有界水波纹点击效果**后，使用[开发者选项 - 调试GPU过渡绘制]得到下面的视图
 
 ![img](https:////upload-images.jianshu.io/upload_images/1354448-d64a1d0d128a14f4.png?imageMogr2/auto-orient/strip|imageView2/2/w/756/format/webp)
 
@@ -94,7 +94,7 @@ android:background="?android:attr/selectableItemBackground"
 > 系统的默认水波纹颜色是灰色，如果需要使用对应的高亮色来作为ripple的背景色，我们可以在`styles-v21`系统主题里加入这个：`<item name = "android:colorControlHighlight">@color/colorAccent</item>`
 
 2、使用自定义有界水波纹效果，使其默认背景色为透明色。
-写法：
+ 写法：
 
 ```java
 <?xml version="1.0" encoding="utf-8"?>
@@ -107,8 +107,8 @@ android:background="?android:attr/selectableItemBackground"
 ```
 
 > 添item时，如果***指定id为@android:id/mask\***，那么不点击时不会显示出该item指定的color。
-可以设置指定子层item的android:id="@android:id/mask"来设定当前Ripple的Mask。
-Mask的内容并不会被绘制到屏幕上，它的作用是限定Ripple效果的绘制区域。
+>  可以设置指定子层item的android:id="@android:id/mask"来设定当前Ripple的Mask。
+>  Mask的内容并不会被绘制到屏幕上，它的作用是限定Ripple效果的绘制区域。
 
 最后可以得到我们想要的效果：
 

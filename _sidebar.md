@@ -1,6 +1,8 @@
 - Android笔记
   - [Android 透明度表](docs%2Fandroid%2FAndroid%20%E9%80%8F%E6%98%8E%E5%BA%A6%E8%A1%A8.md)
   - [Android 水波纹效果](docs%2Fandroid%2FAndroid%20%E6%B0%B4%E6%B3%A2%E7%BA%B9%E6%95%88%E6%9E%9C.md)
+- 架构图
+  - [一、设计模式](docs%2F%E6%9E%B6%E6%9E%84%E5%9B%BE%2F%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F.md)
 - 架构设计师笔记
   - [架构知识点锦集](docs%2F%E6%9E%B6%E6%9E%84%2FREADME.md)
   - 系统架构设计师考试试题分类精解
