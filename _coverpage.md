@@ -9,11 +9,12 @@
                                                                                                   
                                                                                                   
 ```
-# 2023年目标
+## 2023年小目标 
 
-* 1.努力增加收入
-* 2.通过架构考试
-* 3.健康的好身体
+* ![](https://img.shields.io/badge/1-终身持续学习-4385f4)
+* ![](https://img.shields.io/badge/2-健康的好身体-e94336)
+* ![](https://img.shields.io/badge/3-通过架构考试-fbbc06)
+* ![](https://img.shields.io/badge/4-努力增加收入-34a853)
 
 <embed type="image/jpg" src="https://source.unsplash.com/random/900x500?" width="258" >
 
