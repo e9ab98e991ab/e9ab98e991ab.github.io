@@ -56,10 +56,9 @@
             function (hook, vm) {
                 // load livere
                 hook.beforeEach(function(content) {
-                    var comment = "\n<div id='lv-container' data-id='city' data-uid='"+live+"'></div>\n\n----\n"
+                    var comment = "\n<div id='lv-container' data-id='city' data-uid='"+live+"'></div>\n"
                     return content + comment;
                 });
-
                 hook.doneEach(function() {
                     (function(d, s) {
                         var j, e = d.getElementsByTagName(s)[0];
