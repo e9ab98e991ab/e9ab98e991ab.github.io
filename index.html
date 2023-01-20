@@ -40,6 +40,24 @@
             skin: 'default',
         },
         loadFooter: true,
+        loadFooter: '_footer.md',
+        copyCode: {
+            buttonText: {
+                '/': '点击复制'
+            },
+            errorText: {
+                '/': '错误，请重试！'
+            },
+            successText: {
+                '/': '复制成功'
+            }
+        },
+        progress: {
+            position: "top",
+            color: "var(--theme-color,#42b983)",
+            height: "5px",
+        },
+
     }
 </script>
 <script src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
@@ -48,6 +66,6 @@
 <script src="//unpkg.com/docsify-count/dist/countable.js"></script>
 <script src="//unpkg.com/docsify-plantuml/dist/docsify-plantuml.min.js"></script>
 <script src="//cdn.jsdelivr.net/npm/@alertbox/docsify-footer/dist/docsify-footer.min.js"></script>
-
+<script src="https://cdn.jsdelivr.net/npm/docsify-progress@latest/dist/progress.min.js"></script>
 </body>
 </html>
