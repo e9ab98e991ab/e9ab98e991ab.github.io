@@ -11,9 +11,9 @@
 ```
 # 2023年目标
 
-* 努力增加收入
-* 通过架构考试
-* 健康的好身体
+* 1.努力增加收入
+* 2.通过架构考试
+* 3.健康的好身体
 
 <embed type="image/jpg" src="https://source.unsplash.com/random/900x500?" width="258" >
 
