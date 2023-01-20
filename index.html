@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<script>var live = "MTAyMC81Nzk1Ni8zNDQxOQ"</script>
 <head>
     <meta charset="UTF-8">
     <title>文档</title>
@@ -11,12 +12,6 @@
 </head>
 <body>
 <div id="app"></div>
-<script>
-    window.$docsify = {
-        name: 'e9ab98e991ab',
-        repo: 'https://github.com/e9ab98e991ab/e9ab98e991ab.github.io'
-    }
-</script>
 <!-- Docsify v4 -->
 <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
 <!--封面 start-->
@@ -57,6 +52,26 @@
             color: "var(--theme-color,#42b983)",
             height: "5px",
         },
+        plugins: [
+            function (hook, vm) {
+                // load livere
+                hook.beforeEach(function(content) {
+                    var comment = "\n<div id='lv-container' data-id='city' data-uid='"+live+"'></div>\n\n----\n"
+                    return content + comment;
+                });
+
+                hook.doneEach(function() {
+                    (function(d, s) {
+                        var j, e = d.getElementsByTagName(s)[0];
+                        if (typeof LivereTower === 'function') { return; }
+                        j = d.createElement(s);
+                        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+                        j.async = true;
+                        e.parentNode.insertBefore(j, e);
+                    })(document, 'script');
+                });
+            },
+        ]
 
     }
 </script>
